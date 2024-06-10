@@ -13,7 +13,11 @@ const app = express();
 app.use(express.json());
 
 // Middleware for handling CORS
-app.use(cors());
+app.use(cors({
+  origin:["https://book-store-front-end-orcin.vercel.app"],
+  methods:["POST","DELETE","GET","PUT"],
+  credentials: true
+}));
 
 // Routes
 app.use('/books', booksRoute);
