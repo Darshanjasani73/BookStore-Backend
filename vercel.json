@@ -2,28 +2,16 @@
     "version":2,
     "builds": [
       {
-        "src": "index.js",
+        "src": "*.js",
         "use": "@vercel/node"
       },
     ],
   
     "routes":[
         {
-            "src":"/books/create",
-            "dest":"index.js"
-        },
-        {
-            "src":"/books/details/(.*)",
-            "dest":"index.js"
-        },
-        {
-            "src":"/books/edit/(.*)",
-            "dest":"index.js"
-        },
-        {
-            "src":"/books/delete/(.*)",
-            "dest":"index.js"
-        },
+            "src":"/(.*)",
+            "dest":"/"
+        }
     ]
   }
   
