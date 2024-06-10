@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Middleware for handling CORS
 app.use(cors({
-  origin:["https://book-store-front-end-xi.vercel.app/"],
+  origin:["https://book-store-front-end-xi.vercel.app"],
   methods:["POST","DELETE","GET","PUT"],
   credentials: true
 }));
